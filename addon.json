@@ -1,0 +1,11 @@
+{
+	"title"		:	"TTT Weapon Pack",
+	"type"		:	"weapon",
+	"tags"		:	[ "roleplay", "fun" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
