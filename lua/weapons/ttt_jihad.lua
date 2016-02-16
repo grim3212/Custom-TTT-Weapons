@@ -69,17 +69,8 @@ SWEP.IsSilent = false
 -- If NoSights is true, the weapon won't have ironsights
 SWEP.NoSights = true
 
--- Tell the server that it should download our icon to clients.
-if SERVER then
-   -- It's important to give your icon a unique name. GMod does NOT check for
-   -- file differences, it only looks at the name. This means that if you have
-   -- an icon_ak47, and another server also has one, then players might see the
-   -- other server's dumb icon. Avoid this by using a unique name.
-   resource.AddFile("materials/VGUI/ttt/icon_ttt_jihad.vmt")
-end
-
 -- Precache custom sounds
-function SWEP:Precache()
+function SWEP:Initialize()
    util.PrecacheSound( "weapons/ttt_jihad/big_explosion.wav" )
    util.PrecacheSound( "weapons/ttt_jihad/jihad.wav" )
 end

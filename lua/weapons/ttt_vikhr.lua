@@ -72,7 +72,7 @@ SWEP.IsSilent = false
 SWEP.NoSights = false
 
 -- Precache custom sounds
-function SWEP:Precache()
+function SWEP:Initialize()
    util.PrecacheSound( "weapons/ttt_vikhr/galil-1.wav" )
 end
 
@@ -111,12 +111,3 @@ sound.Add({
 	volume = 		1.0,
 	sound = 			"weapons/ttt_vikhr/draw.mp3"
 })
-
--- Tell the server that it should download our icon to clients.
-if SERVER then
-   -- It's important to give your icon a unique name. GMod does NOT check for
-   -- file differences, it only looks at the name. This means that if you have
-   -- an icon_ak47, and another server also has one, then players might see the
-   -- other server's dumb icon. Avoid this by using a unique name.
-   resource.AddFile("materials/VGUI/ttt/icon_ttt_vikhr.vmt")
-end
