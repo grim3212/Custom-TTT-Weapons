@@ -72,6 +72,7 @@ SWEP.NoSights = false
 
 -- Precache custom sounds
 function SWEP:Initialize()
+   self:SetHoldType( self.HoldType )
    util.PrecacheSound( "weapons/ttt_honeybadger/honeybadger-1.wav" )
 end
 

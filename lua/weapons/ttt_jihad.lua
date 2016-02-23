@@ -71,6 +71,7 @@ SWEP.NoSights = true
 
 -- Precache custom sounds
 function SWEP:Initialize()
+   self:SetHoldType( self.HoldType )
    util.PrecacheSound( "weapons/ttt_jihad/big_explosion.wav" )
    util.PrecacheSound( "weapons/ttt_jihad/jihad.wav" )
 end

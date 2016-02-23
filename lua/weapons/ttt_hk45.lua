@@ -1,6 +1,6 @@
 -- First some standard GMod stuff
 if SERVER then
-   AddCSLuaFile()
+	AddCSLuaFile()
 end
 
 if CLIENT then
@@ -72,6 +72,7 @@ SWEP.NoSights = false
 
 -- Precache custom sounds
 function SWEP:Initialize()
+   self:SetHoldType( self.HoldType )
    util.PrecacheSound( "weapons/ttt_hk45/hk45-1.wav" )
 end
 

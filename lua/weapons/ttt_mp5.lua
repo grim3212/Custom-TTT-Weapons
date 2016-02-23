@@ -21,6 +21,7 @@ SWEP.Base = "weapon_tttbase"
 -- Standard GMod values
 SWEP.HoldType = "ar2"
 
+
 SWEP.Primary.Ammo = "smg1"
 SWEP.Primary.Delay = 0.1
 SWEP.Primary.Recoil = 0.15
@@ -73,6 +74,7 @@ SWEP.NoSights = false
 
 -- Precache custom sounds
 function SWEP:Initialize()
+   self:SetHoldType( self.HoldType )
    util.PrecacheSound( "weapons/ttt_mp5/mp5-1.wav" )
 end
 

@@ -73,6 +73,7 @@ SWEP.NoSights = false
 
 -- Precache custom sounds
 function SWEP:Initialize()
+   self:SetHoldType( self.HoldType )
    util.PrecacheSound( "weapons/ttt_vikhr/galil-1.wav" )
 end
 
